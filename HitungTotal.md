@@ -20,4 +20,5 @@ Digunakan untuk mengambil harga dari array hargaItems.
 2️. int banyakItem
 Artinya: jumlah porsi/item yang dipesan pelanggan.
 Digunakan untuk menghitung total harga = harga satu item × jumlah item.
-3. 
+3. done
+4. done

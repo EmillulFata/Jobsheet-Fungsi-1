@@ -18,33 +18,32 @@ public class HitungTotal07 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        Menu();
-        System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
-        int pilihanMenu = input.nextInt();
+        int totalKeseluruhan = 0;
+        int pilihanMenu;
+        int banyakItem;
 
-        System.out.print("Masukkan jumlah item yang ingin dipesan: ");
-        int banyakItem = input.nextInt();
+while (true) {
+    Menu();
+    System.out.print("\nMasukkan nomor menu (0 untuk selesai): ");
+    pilihanMenu = input.nextInt();
 
-        input.nextLine();
-        System.out.print("Masukkan kode promo (jika ada): ");
-        String kodePromo = input.nextLine();
-
-        int totalHarga = hitungTotalHargaNoAbsen(pilihanMenu, banyakItem);
-        int totalBayar = totalHarga;
-
-        if (kodePromo.equals("DISKON50")) {
-            int diskon = totalHarga * 50 / 100;
-            System.out.println("Kode Promo DISKON50 - Diskon 50%");
-            System.out.println("Potongan harga: Rp" + diskon);
-            totalBayar = totalHarga - diskon;
-        } else if (kodePromo.equals("DISKON30")) {
-            int diskon = totalHarga * 30 / 100;
-            System.out.println("Kode Promo DISKON30 - Diskon 30%");
-            System.out.println("Potongan harga: Rp" + diskon);
-            totalBayar = totalHarga - diskon;
-        } else if (!kodePromo.isEmpty()) {
-            System.out.println("Kode promo tidak valid. Tidak ada diskon.");
+    if (pilihanMenu == 0) {
+        break;
         }
-        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
+        if (pilihanMenu < 1 || pilihanMenu > 6) {
+            System.out.println("Menu tidak valid! Silakan pilih lagi.");
+            continue;
+            }
+            System.out.print("Masukkan jumlah item untuk menu tersebut: ");
+            banyakItem = input.nextInt();
+
+            int totalHarga = hitungTotalHargaNoAbsen(pilihanMenu, banyakItem);
+            totalKeseluruhan += totalHarga;
+
+            System.out.println("Subtotal pesanan menu ini: Rp" + totalHarga);
+            System.out.println("-----------------------------------");
+        }
+        System.out.println("\nTotal keseluruhan pesanan Anda: Rp" + totalKeseluruhan);
+        System.out.println("Terima kasih telah memesan!");
     }
 }
