@@ -25,4 +25,10 @@ Parameter adalah variabel khusus yang hanya ada di dalam definisi fungsi dan ber
 4. Cara kerjanya adalah Jika "isMember" bernilai true, maka pesan diskon akan ditampilkan. Jika "isMember" bernilai false, bagian dalam if tidak dieksekusi, sehingga tidak ada pesan diskon.
 5. akan error saat meng-compile karena fungsi menu () wajib menerima 2
 parameter Jika tidak diberi nilai, Java tidak tahu apa yang harus dimasukkan ke variabel namaPelanggan dan isMember.
-6. 
+6. modif done
+7. modif done
+8. Ya, penggunaan parameter namaPelanggan dan isMember membuat program lebih mudah dibaca dan dikembangkan. karena :
+  a. Lebih fleksibel — fungsi bisa dipakai untuk banyak pelanggan tanpa mengubah isi fungsi.
+  b. Lebih rapi — data tidak ditulis langsung di dalam fungsi, sehingga kode lebih terstruktur.
+  c. Mudah dikembangkan — jika ingin menambah fitur baru (misalnya level member, poin, promo), cukup tambahkan parameter tanpa mengubah logika utama.
+  d. Mudah dipahami — dari pemanggilannya saja sudah terlihat siapa pelanggan dan statusnya.
