@@ -25,7 +25,26 @@ public class HitungTotal07 {
         System.out.print("Masukkan jumlah item yang ingin dipesan: ");
         int banyakItem = input.nextInt();
 
+        input.nextLine();
+        System.out.print("Masukkan kode promo (jika ada): ");
+        String kodePromo = input.nextLine();
+
         int totalHarga = hitungTotalHargaNoAbsen(pilihanMenu, banyakItem);
-        System.out.println("Total harga untuk pesanan Anda: Rp" + totalHarga);
+        int totalBayar = totalHarga;
+
+        if (kodePromo.equals("DISKON50")) {
+            int diskon = totalHarga * 50 / 100;
+            System.out.println("Kode Promo DISKON50 - Diskon 50%");
+            System.out.println("Potongan harga: Rp" + diskon);
+            totalBayar = totalHarga - diskon;
+        } else if (kodePromo.equals("DISKON30")) {
+            int diskon = totalHarga * 30 / 100;
+            System.out.println("Kode Promo DISKON30 - Diskon 30%");
+            System.out.println("Potongan harga: Rp" + diskon);
+            totalBayar = totalHarga - diskon;
+        } else if (!kodePromo.isEmpty()) {
+            System.out.println("Kode promo tidak valid. Tidak ada diskon.");
+        }
+        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
     }
 }
