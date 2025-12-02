@@ -1,0 +1,11 @@
+1. Jelaskan mengapa penulisan parameter di praktikum 4 ditulis dengan String... 
+namaPengunjung! 
+2. Modifikasi method daftarPengunjung menggunakan for-each loop. 
+3. Bisakah menggunakan dua tipe data varaargs dalam satu fungsi? Jelaskan jawaban Anda berdasarkan aturan varargs di Java, dan berikan contohnya! 
+4. Jelaskan apa yang terjadi jika fungsi daftarPengunjung dipanggil tanpa
+argumen. 
+Apakah program akan error saat kompilasi, error saat dijalankan, atau tetap berjalan? Jika tetap berjalan, bagaimana output yang dihasilkan?
+
+Jawab :
+1. String... namaPengunjung adalah fitur Java yang memungkinkan sebuah fungsi menerima jumlah argumen yang tidak terbatas dengan tipe data yang sama.
+2. 
